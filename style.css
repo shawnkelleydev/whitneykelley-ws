@@ -222,6 +222,10 @@ button:active {
   display: none;
 }
 
+#lessonInfoBox > div:nth-child(2) {
+  display: block;
+}
+
 #lessonInfoBox > div:nth-child(odd) {
   cursor: pointer;
 }
@@ -304,7 +308,6 @@ button:active {
 
   #lessonInfoBox > div:nth-child(odd) {
     border-left: 1px solid var(--darkBlue);
-    border-right: 1px solid var(--darkBlue);
   }
 
   #lessonInfoBox > div:nth-child(1) {
