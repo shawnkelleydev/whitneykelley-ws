@@ -182,9 +182,17 @@ button {
 
 button,
 #lessonInfoBox,
-#lessonInfoBox > div:nth-child(3),
-#lessonInfoBox > div:nth-child(5) {
+#lessonInfoBox > div:last-child {
   border-radius: 20px;
+}
+
+#lessonInfoBox > div:nth-child(odd) {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#lessonInfoBox > div:first-child {
+  background-color: var(--lightBlue);
 }
 
 button:hover,
@@ -327,7 +335,8 @@ button:active {
     grid-column: 1/2;
     grid-row: 3/4;
     border-bottom: solid 1px var(--darkBlue);
-    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
   }
 
   #lessonInfoBox > div:nth-child(3),

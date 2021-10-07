@@ -7,13 +7,16 @@ function listen() {
         l[i].style.display = "none";
       }
 
+      for (let i = 0; i < l.length; i += 2) {
+        l[i].style.backgroundColor = "white";
+      }
+
       if (l[i + 1].style.display === "none" || l[i + 1].style.display === "") {
         l[i + 1].style.display = "block";
-        for (let x = 0; x <= 4; x += 2) {
-          l[x].style.borderRight = "none";
-        }
+        l[i].style.backgroundColor = "rgb(211, 241, 250)";
       } else {
         l[i + 1].style.display = "none";
+        l[i].style.backgroundColor = "white";
       }
     });
   }
