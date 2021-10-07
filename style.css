@@ -32,7 +32,7 @@ body > div > div > div {
 }
 
 body > div > div,
-#lib > div {
+#lessonInfoBox > div {
   padding: 20px;
 }
 
@@ -181,9 +181,9 @@ button {
 }
 
 button,
-#lib,
-#lib > div:nth-child(3),
-#lib > div:nth-child(5) {
+#lessonInfoBox,
+#lessonInfoBox > div:nth-child(3),
+#lessonInfoBox > div:nth-child(5) {
   border-radius: 20px;
 }
 
@@ -209,24 +209,24 @@ button:active {
   color: white;
 }
 
-#lib {
+#lessonInfoBox {
   border: 1px solid var(--darkBlue);
 }
 
-#lib > div:nth-child(3),
-#lib > div:nth-child(5) {
+#lessonInfoBox > div:nth-child(3),
+#lessonInfoBox > div:nth-child(5) {
   border-top: 1px solid var(--darkBlue);
 }
 
-#lib > div:nth-child(even) {
+#lessonInfoBox > div:nth-child(even) {
   display: none;
 }
 
-#lib > div:nth-child(odd) {
+#lessonInfoBox > div:nth-child(odd) {
   cursor: pointer;
 }
 
-#lib ul {
+#lessonInfoBox ul {
   list-style: square;
   padding-left: 20px;
 }
@@ -295,19 +295,19 @@ button:active {
     );
   }
 
-  #lib {
+  #lessonInfoBox {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 70px 70px 70px auto;
     border: none;
   }
 
-  #lib > div:nth-child(odd) {
+  #lessonInfoBox > div:nth-child(odd) {
     border-left: 1px solid var(--darkBlue);
     border-right: 1px solid var(--darkBlue);
   }
 
-  #lib > div:nth-child(1) {
+  #lessonInfoBox > div:nth-child(1) {
     grid-column: 1/2;
     grid-row: 1/2;
     border-top: 1px solid var(--darkBlue);
@@ -315,46 +315,46 @@ button:active {
     border-top-right-radius: 0;
   }
 
-  #lib > div:nth-child(3) {
+  #lessonInfoBox > div:nth-child(3) {
     grid-column: 1/2;
     grid-row: 2/3;
   }
 
-  #lib > div:nth-child(5) {
+  #lessonInfoBox > div:nth-child(5) {
     grid-column: 1/2;
     grid-row: 3/4;
     border-bottom: solid 1px var(--darkBlue);
     border-bottom-left-radius: 0;
   }
 
-  #lib > div:nth-child(3),
-  #lib > div:nth-child(5) {
+  #lessonInfoBox > div:nth-child(3),
+  #lessonInfoBox > div:nth-child(5) {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
 
-  #lib > div:nth-child(3),
-  #lib > div:nth-child(1) {
+  #lessonInfoBox > div:nth-child(3),
+  #lessonInfoBox > div:nth-child(1) {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  #lib > div:nth-child(odd):hover {
+  #lessonInfoBox > div:nth-child(odd):hover {
     background-color: var(--lightBlue);
   }
 
-  #lib > div:nth-child(7) {
+  #lessonInfoBox > div:nth-child(7) {
     grid-column: 1/2;
     grid-row: 4/5;
     border: none;
   }
 
-  #lib > div:nth-child(7):hover {
+  #lessonInfoBox > div:nth-child(7):hover {
     background-color: white;
     cursor: default;
   }
 
-  #lib > div:nth-child(even) {
+  #lessonInfoBox > div:nth-child(even) {
     grid-column: 2/3;
     grid-row: 1/5;
     border: 1px solid var(--darkBlue);
