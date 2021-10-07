@@ -1,0 +1,365 @@
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  --darkBlue: rgb(19, 64, 77);
+  --blue: rgb(43, 134, 161);
+  --lightBlue: rgb(211, 241, 250);
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+body,
+footer,
+body > div,
+body > div > div,
+body > div > div > div {
+  font-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+body > div > div,
+#lib > div {
+  padding: 20px;
+}
+
+#profilebox {
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.75em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h1,
+h2,
+h3 {
+  text-align: left;
+}
+
+p,
+a {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#perfbox > ul > li > ul {
+  padding-left: 50px;
+}
+
+#perfbox > ul > li > ul > li,
+#pubbox li {
+  padding-bottom: 20px;
+}
+
+#pubbox li {
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+  color: var(--blue);
+  transition: color 0.1s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+}
+
+button:hover {
+  color: var(--lightBlue);
+}
+
+#banner {
+  display: none;
+}
+
+footer {
+  background: linear-gradient(
+    to bottom,
+    rgb(43, 134, 161) 0%,
+    rgb(19, 64, 77) 100%
+  );
+  color: white;
+  height: auto;
+  flex-direction: column-reverse;
+}
+
+span {
+  display: block;
+  height: 1px;
+  width: 80%;
+  background-color: var(--darkBlue);
+  margin: 40px;
+}
+
+#profilebox,
+footer {
+  padding: 20px;
+}
+
+#profilebox {
+  background-color: white;
+  border-bottom: 5px var(--darkBlue) solid;
+}
+
+#profilebox h1,
+#profilebox h2 {
+  text-align: center;
+}
+
+footer > p {
+  font-size: 0.7em;
+}
+
+h1 {
+  color: var(--blue);
+}
+
+#contentbox {
+  max-width: 1000px;
+}
+
+#infobox {
+  background-color: white;
+}
+
+#infobox > div {
+  text-align: justify;
+}
+
+#headshot,
+button,
+a {
+  max-width: 300px;
+}
+
+#headshot {
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgb(56, 56, 56);
+}
+
+button {
+  border: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  color: white;
+  background-color: var(--blue);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+button,
+#lib,
+#lib > div:nth-child(3),
+#lib > div:nth-child(5) {
+  border-radius: 20px;
+}
+
+button:hover,
+button:active {
+  background-color: var(--lightBlue);
+  color: var(--darkBlue);
+}
+
+#awardbox ul {
+  padding-left: 20px;
+}
+
+#aboutlessons {
+  margin-top: 0;
+  background-color: white;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+#aboutlessons:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+#lib {
+  border: 1px solid var(--darkBlue);
+}
+
+#lib > div:nth-child(3),
+#lib > div:nth-child(5) {
+  border-top: 1px solid var(--darkBlue);
+}
+
+#lib > div:nth-child(even) {
+  display: none;
+}
+
+#lib > div:nth-child(odd) {
+  cursor: pointer;
+}
+
+#lib ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+@media (min-width: 700px) {
+  #headshot,
+  #profilebox > h1,
+  #profilebox > h2,
+  #profilebox > h3,
+  #pubspan,
+  #perfspan {
+    display: none;
+  }
+
+  #buttonbox {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #aboutlessons {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  #profilebox {
+    padding: 0;
+  }
+
+  #banner {
+    display: block;
+    max-width: 1000px;
+    border-bottom: 1px solid var(--lightBlue);
+  }
+
+  #infobox {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    align-items: flex-start;
+  }
+
+  #biobox {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-right: 20px;
+  }
+
+  #otherbox {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 20px;
+  }
+
+  #lessonbox {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    border-top: var(--darkBlue) 5px solid;
+    padding-top: 20px;
+  }
+
+  body {
+    background: linear-gradient(
+      to bottom,
+      rgb(211, 241, 250) 0%,
+      rgb(43, 134, 161) 100%
+    );
+  }
+
+  #lib {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70px 70px 70px auto;
+    border: none;
+  }
+
+  #lib > div:nth-child(odd) {
+    border-left: 1px solid var(--darkBlue);
+    border-right: 1px solid var(--darkBlue);
+  }
+
+  #lib > div:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-top: 1px solid var(--darkBlue);
+    border-radius: 20px;
+    border-top-right-radius: 0;
+  }
+
+  #lib > div:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #lib > div:nth-child(5) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border-bottom: solid 1px var(--darkBlue);
+    border-bottom-left-radius: 0;
+  }
+
+  #lib > div:nth-child(3),
+  #lib > div:nth-child(5) {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  #lib > div:nth-child(3),
+  #lib > div:nth-child(1) {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  #lib > div:nth-child(odd):hover {
+    background-color: var(--lightBlue);
+  }
+
+  #lib > div:nth-child(7) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    border: none;
+  }
+
+  #lib > div:nth-child(7):hover {
+    background-color: white;
+    cursor: default;
+  }
+
+  #lib > div:nth-child(even) {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    border: 1px solid var(--darkBlue);
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
