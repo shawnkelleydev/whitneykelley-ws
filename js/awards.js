@@ -1,4 +1,4 @@
-fetch("awards.json")
+fetch("json/awards.json")
   .then((r) => r.json())
   .then((d) => {
     awriter(d);

@@ -1,4 +1,4 @@
-fetch("pub.json")
+fetch("json/pub.json")
   .then((r) => r.json())
   .then((d) => {
     pubwriter(d);

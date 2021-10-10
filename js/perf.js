@@ -1,4 +1,4 @@
-fetch("perf.json")
+fetch("json/perf.json")
   .then((r) => r.json())
   .then((d) => {
     pwriter(d);
