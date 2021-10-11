@@ -13,7 +13,7 @@ function pwriter(arr) {
     `;
   for (let i = 0; i < arr.length; i++) {
     html += `
-    <li><a href="${arr[i].link}" target="_blank"><h3>${arr[i].name}</h3></a>
+    <li><a href="${arr[i].link}" target="_blank" rel="noopener"><h3>${arr[i].name}</h3></a>
       <ul>
         <li>${arr[i].datetime}</li>
         <li>${arr[i].notes}</li>
