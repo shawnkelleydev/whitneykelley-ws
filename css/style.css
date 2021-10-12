@@ -10,12 +10,16 @@ html {
   box-sizing: inherit;
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
-  --darkBlue: rgb(19, 64, 77);
-  --blue: rgb(43, 134, 161);
-  --lightBlue: rgb(211, 241, 250);
+
   width: 100%;
   font-family: "Quicksand", sans-serif;
   margin: 0;
+}
+
+:root {
+  --darkBlue: rgb(19, 64, 77);
+  --blue: rgb(43, 134, 161);
+  --lightBlue: rgb(211, 241, 250);
 }
 
 body,
@@ -349,10 +353,6 @@ button:active {
   #lessonInfoBox > div:nth-child(1) {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
-
-  #lessonInfoBox > div:nth-child(odd):hover {
-    background-color: var(--lightBlue);
   }
 
   #lessonInfoBox > div:nth-child(7) {
