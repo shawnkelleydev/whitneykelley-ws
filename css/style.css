@@ -197,10 +197,6 @@ button:active {
   color: var(--darkBlue);
 }
 
-/* #awardbox ul {
-  padding-left: 20px;
-} */
-
 #aboutLessonsButton {
   margin-top: 0;
   background-color: white;
@@ -261,6 +257,10 @@ button:active {
   #pubspan,
   #perfspan {
     display: none;
+  }
+
+  #infobox {
+    padding: 40px;
   }
 
   #buttonbox {
