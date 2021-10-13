@@ -356,6 +356,15 @@ button:active {
     border-top: none;
   }
 
+  #lessons-full-screen > div:nth-child(1) li:last-child {
+    cursor: default;
+    border: none;
+  }
+
+  #lessons-full-screen > div:nth-child(1) li:last-child > a {
+    width: 126px;
+  }
+
   #lessons-full-screen > div:nth-child(1) li:nth-child(1) {
     border-top-left-radius: 20px;
   }

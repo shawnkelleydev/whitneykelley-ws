@@ -152,10 +152,10 @@ function mobileListen() {
         lessonsMobile[i + 1].style.display === ""
       ) {
         lessonsMobile[i + 1].style.display = "block";
-        lessonsMobile[i].style.backgroundColor = "rgb(211, 241, 250)";
+        // lessonsMobile[i].style.backgroundColor = "rgb(211, 241, 250)";
       } else {
         lessonsMobile[i + 1].style.display = "none";
-        lessonsMobile[i].style.backgroundColor = "white";
+        // lessonsMobile[i].style.backgroundColor = "white";
       }
     });
   }
@@ -187,16 +187,22 @@ lessonsFullScreen[0].addEventListener("click", (e) => {
   let target = e.target;
   if (target.tagName === "LI") {
     //cancel previous displays
-    for (let i = 0; i < menuLI.length; i++) {
+    for (let i = 0; i < 3; i++) {
       infoLI[i].style.display = "none";
       menuLI[i].style.backgroundColor = "white";
     }
-    //process clicks
-    target.style.backgroundColor = "rgb(211, 241, 250)";
-    lessonInfoDisplayLoop(target, "block");
+    //cancel studio policy li
+    if (target === menuLI[3]) {
+      target.style.backgroundColor = "white";
+      //process legitimate clicks
+    } else {
+      target.style.backgroundColor = "rgb(211, 241, 250)";
+      lessonInfoDisplayLoop(target, "block");
+    }
   }
 });
 
+//tests menu / info li for match
 function lessonInfoDisplayLoop(target, displayType) {
   for (let i = 0; i < menuLI.length; i++) {
     if (target === menuLI[i]) {
