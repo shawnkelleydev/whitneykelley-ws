@@ -36,8 +36,8 @@ body > div > div > div {
 }
 
 body > div > div,
-#lessonInfoBox > div {
-  padding: 20px 40px;
+#lessons-mobile > div:nth-child(even) {
+  padding: 20px;
 }
 
 #profilebox {
@@ -185,18 +185,10 @@ button {
 }
 
 button,
-#lessonInfoBox,
-#lessonInfoBox > div:last-child {
+#lessons-mobile,
+#lessons-mobile > div:last-child,
+#lessons-mobile > div:nth-child(odd) {
   border-radius: 20px;
-}
-
-#lessonInfoBox > div:nth-child(odd) {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-#lessonInfoBox > div:first-child {
-  background-color: var(--lightBlue);
 }
 
 button:hover,
@@ -205,46 +197,60 @@ button:active {
   color: var(--darkBlue);
 }
 
-#awardbox ul {
+/* #awardbox ul {
   padding-left: 20px;
-}
+} */
 
-#aboutlessons {
+#aboutLessonsButton {
   margin-top: 0;
   background-color: white;
   color: var(--blue);
   border: 1px solid var(--blue);
 }
 
-#aboutlessons:hover {
+#aboutLessonsButton:hover {
   background-color: var(--blue);
   color: white;
 }
 
-#lessonInfoBox {
+#lessonInfoBox h3 {
+  margin: 0;
+}
+
+#lessonInfoBox div:nth-child(3) {
+  margin-top: 20px;
+}
+
+#lessons-mobile {
   border: 1px solid var(--darkBlue);
 }
 
-#lessonInfoBox > div:nth-child(3),
-#lessonInfoBox > div:nth-child(5) {
+#lessons-mobile > div:nth-child(3),
+#lessons-mobile > div:nth-child(5) {
   border-top: 1px solid var(--darkBlue);
 }
 
-#lessonInfoBox > div:nth-child(even) {
+#lessons-mobile > div:nth-child(even) {
   display: none;
 }
 
-#lessonInfoBox > div:nth-child(2) {
-  display: block;
-}
-
-#lessonInfoBox > div:nth-child(odd) {
+#lessons-mobile > div:nth-child(odd) {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  height: 80px;
+  padding-left: 20px;
 }
 
-#lessonInfoBox ul {
+#lessons-mobile ul {
   list-style: square;
   padding-left: 20px;
+}
+
+#lessons-full-screen {
+  display: none;
 }
 
 @media (min-width: 700px) {
@@ -262,7 +268,7 @@ button:active {
     justify-content: center;
   }
 
-  #aboutlessons {
+  #aboutLessonsButton {
     margin-top: 20px;
     margin-left: 20px;
   }
@@ -311,67 +317,69 @@ button:active {
     );
   }
 
-  #lessonInfoBox {
+  /*
+  
+    Lesson info redo
+
+    1. style info content li
+    2. hide/reveal js, color change on menu
+
+  */
+
+  #lessons-mobile {
+    display: none;
+  }
+
+  #lessons-full-screen {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 70px 70px 70px auto;
-    border: none;
+    grid-template-columns: 40% 60%;
+    justify-items: flex-end;
   }
 
-  #lessonInfoBox > div:nth-child(odd) {
-    border-left: 1px solid var(--darkBlue);
+  #lessons-full-screen > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
   }
 
-  #lessonInfoBox > div:nth-child(1) {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    border-top: 1px solid var(--darkBlue);
-    border-radius: 20px;
-    border-top-right-radius: 0;
+  #lessons-full-screen > div:nth-child(1) li {
+    height: 3em;
+    border: solid 1px var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
   }
 
-  #lessonInfoBox > div:nth-child(3) {
-    grid-column: 1/2;
-    grid-row: 2/3;
+  #lessons-full-screen > div:nth-child(1) li:nth-child(n + 2) {
+    border-top: none;
   }
 
-  #lessonInfoBox > div:nth-child(5) {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    border-bottom: solid 1px var(--darkBlue);
-    border-bottom-left-radius: 0px;
+  #lessons-full-screen > div:nth-child(1) li:nth-child(1) {
+    border-top-left-radius: 20px;
+  }
+
+  #lessons-full-screen > div:nth-child(1) li:nth-child(3) {
     border-bottom-right-radius: 20px;
   }
 
-  #lessonInfoBox > div:nth-child(3),
-  #lessonInfoBox > div:nth-child(5) {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
+  #lessons-full-screen > div:nth-child(2) {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
   }
 
-  #lessonInfoBox > div:nth-child(3),
-  #lessonInfoBox > div:nth-child(1) {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  #lessons-full-screen > div:nth-child(2) > ul {
+    margin: 0;
   }
 
-  #lessonInfoBox > div:nth-child(7) {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    border: none;
-  }
-
-  #lessonInfoBox > div:nth-child(7):hover {
-    background-color: white;
-    cursor: default;
-  }
-
-  #lessonInfoBox > div:nth-child(even) {
-    grid-column: 2/3;
-    grid-row: 1/5;
-    border: 1px solid var(--darkBlue);
-    border-radius: 20px;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+  #lessons-full-screen > div:nth-child(2) > ul > li {
+    display: block;
+    border: solid 1px var(--darkBlue);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px;
+    display: none;
   }
 }

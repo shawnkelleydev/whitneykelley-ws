@@ -26,6 +26,7 @@ function pwriter(arr) {
       </ul>
     </li>`;
   }
+
   html += `</ul>`;
   pb.innerHTML = html;
 }
