@@ -108,8 +108,10 @@ function dateCheck(datecode) {
   const year = newDate.getFullYear();
   let month = newDate.getMonth();
   let day = newDate.getDate();
+  month = month + 1;
   if (month < 10) {
     month = "0" + month;
+    console.log(month);
   }
   if (day < 10) {
     day = "0" + day;
@@ -121,5 +123,3 @@ function dateCheck(datecode) {
   }
   return bool;
 }
-
-dateCheck();
